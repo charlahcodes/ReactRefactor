@@ -4,7 +4,9 @@ import moment from 'moment';
 import Backbone from 'backbone';
 import parse from './parse_auth';
 import {TodoCollection} from './resources';
-import {TodoView} from './views';
+import {ReactTodoView} from './views';
+import React from 'react';
+import ReactDom from 'react-dom';
 
 $.ajaxSetup({
   headers: {
@@ -13,13 +15,24 @@ $.ajaxSetup({
   }
 });
 
-let todos = new TodoCollection();
+// let todos = new TodoCollection();
 
-todos.fetch().then(function() {
+// todos.fetch().then(function() {
   
-  $('.wrapper').html(new TodoView(todos).render().$el);
+//   $('.wrapper').html(new ReactTodoView(todos).render().$el);
 
-});
+// });
+
+
+
+let el = document.querySelector('.wrapper');
+
+ReactDom.render(
+  <ReactTodoView
+    
+  />,
+  el
+);
 
 
 console.log('Hello, World');

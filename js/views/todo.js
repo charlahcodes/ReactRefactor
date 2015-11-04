@@ -1,4 +1,4 @@
-// Obviously we are using jquery
+  // Obviously we are using jquery
 import $ from 'jquery';
 
 
@@ -151,7 +151,7 @@ function View(collection) {
         <h4>Deleting Complete Todos</h4>
       </div>
     `);
-    // Remove the cleat button
+    // Remove the clear button
     this.$el.find('footer .clear').remove();
     // Grab all the models marked complete
     let completeModels = this.collection.filter((model) => {

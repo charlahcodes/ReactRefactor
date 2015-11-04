@@ -1,5 +1,5 @@
-import TodoView from './todo';
+import ReactTodoView from './react_todo';
 
 export {
-  TodoView
+  ReactTodoView
 };
